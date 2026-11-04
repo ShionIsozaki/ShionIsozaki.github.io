@@ -108,6 +108,11 @@
     }
     .media-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line); }
     .media-row .media { aspect-ratio: 4 / 3; }
+    .media.portrait {
+      aspect-ratio: 9 / 16;
+      width: min(100%, 300px);   /* 縦長枠の最大幅。大きくしたければ数値を変更 */
+      margin: 0 auto;
+    }
 
     footer { padding: 32px 0 48px; color: var(--muted); font-size: 13px; text-align: center; }
   </style>
@@ -131,17 +136,17 @@
   <section id="about" class="hero">
     <p class="name">礒﨑汐音</p>
     <p class="affil">茨城大学大学院 理工学研究科 情報工学専攻 修士1年 / 応用コンピューティング研究室</p>
-    <p>【高専時代に機械・制御、学部時代に電気・電子を学んだのち、大学院から情報工学に進みました。センサーなどのハードウェアとソフトウェアを組み合わせた、体を動かして遊べる・学べるシステムづくりに取り組んでいます。】</p>
+    <p>高専時代に機械・制御、学部時代に電気・電子を学んだのち、大学院から情報工学に進みました。センサーなどのハードウェアとソフトウェアを組み合わせた、体を動かして遊べる・学べるシステムづくりに取り組んでいます。</p>
 
     <div class="profile-grid">
       <div class="box">
         <h3>経歴</h3>
         <ul>
-          <li>【2019年4月】 茨城工業高等専門学校 国際創造工学科 機械・制御系 入学</li>
-          <li>【2024年3月】 茨城工業高等専門学校 国際創造工学科 機械・制御系 卒業</li>
-          <li>【2024年4月】 山形大学 情報・エレクトロニクス学科 電気・電子通信コース 入学（3年次編入）</li>
-          <li>【2026年3月】 山形大学 情報・エレクトロニクス学科 電気・電子通信コース 卒業</li>
-          <li>【2026年4月】 茨城大学大学院 理工学研究科 情報工学専攻 入学</li>
+          <li>2019年4月 茨城工業高等専門学校 国際創造工学科 機械・制御系 入学</li>
+          <li>2024年3月 茨城工業高等専門学校 国際創造工学科 機械・制御系 卒業</li>
+          <li>2024年4月 山形大学 情報・エレクトロニクス学科 電気・電子通信コース 入学（3年次編入）</li>
+          <li>2026年3月 山形大学 情報・エレクトロニクス学科 電気・電子通信コース 卒業</li>
+          <li>2026年4月 茨城大学大学院 理工学研究科 情報工学専攻 入学</li>
         </ul>
       </div>
       <div class="box">
@@ -219,26 +224,6 @@
       <article class="card">
         <div class="media">
           ここにデモ動画（assets/game2-demo.mp4）
-          <a href="assets/game2-demo.mp4" target="_blank" rel="noopener noreferrer">
-          <video autoplay loop muted playsinline preload="metadata">
-            <source src="assets/game2-demo.mp4" type="video/mp4">
-          </video>
-        </div>
-      </a>
-        <div class="card-body">
-          <h3>おえかきバランスゲーム</h3>
-          <p class="meta">Unity ／ C# ／ 物理パズル</p>
-          <p>プレイヤー同士が画面上に自由な線を描き足し、それがそのまま物理法則に従う物体となって積み重なっていく対戦型お絵描きバランスゲームです。タワーを崩してしまったプレイヤーが負けとなります。</p>
-          <dl>
-            <dt>実装</dt><dd>物理演算、シーン管理、動的コライダー生成、タイマー管理など</dd>
-            <dt>工夫</dt><dd>決められた形状のブロックを積み重ねるのではなく、自身で自由な図形を落とすことができるようになっている点。これにより戦略の幅が広がり、楽しみ方のレパートリーも増えた。</dd>
-          </dl>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="media">
-          ここにデモ動画（assets/game2-demo.mp4）
           <a href="assets/game3-demo.mp4" target="_blank" rel="noopener noreferrer">
           <video autoplay loop muted playsinline preload="metadata">
             <source src="assets/game3-demo.mp4" type="video/mp4">
@@ -247,7 +232,7 @@
       </a>
         <div class="card-body">
           <h3>Quiz Adventure</h3>
-          <p class="meta">OpenFrameWorksル ／ C++ ／ アドベンチャー</p>
+          <p class="meta">OpenFrameWorks ／ C++ ／ アドベンチャー</p>
           <p>次々と出題される二択クイズに立ち位置で回答し、クリアを目指すゲーム。未就学児、小学1~6年、中学生以上の8パターンから出題されるクイズの難易度を選択でき、さらに科目も選べる。収録された問題数は600問以上。地域の科学館で展示を行った。</p>
           <dl>
             <dt>実装</dt><dd>Webカメラ、ノイズ抑制、背景差分法</dd>
@@ -294,6 +279,26 @@
         </div>
       </article>
 
+      <article class="card">
+        <div class="media portrait">
+          ここにデモ動画（assets/game2-demo.mp4）
+          <a href="assets/game2-demo.mp4" target="_blank" rel="noopener noreferrer">
+          <video autoplay loop muted playsinline preload="metadata">
+            <source src="assets/game2-demo.mp4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+        <div class="card-body">
+          <h3>おえかきバランスゲーム</h3>
+          <p class="meta">Unity ／ C# ／ 物理パズル</p>
+          <p>プレイヤー同士が画面上に自由な線を描き足し、それがそのまま物理法則に従う物体となって積み重なっていく対戦型お絵描きバランスゲームです。タワーを崩してしまったプレイヤーが負けとなります。</p>
+          <dl>
+            <dt>実装</dt><dd>物理演算、シーン管理、動的コライダー生成、タイマー管理など</dd>
+            <dt>工夫</dt><dd>決められた形状のブロックを積み重ねるのではなく、自身で自由な図形を落とすことができるようになっている点。これにより戦略の幅が広がり、楽しみ方のレパートリーも増えた。</dd>
+          </dl>
+        </div>
+      </article>
+
     </div>
 
     <!-- ---------- ソフトウェア ---------- -->
@@ -309,7 +314,7 @@
         </div>
         <div class="card-body">
           <h3>価格検索・比較ソフト<span class="status">個人開発</span></h3>
-          <p class="meta">Python ／ Yahoo!ショッピンAPI ／ 価格比較アプリ</p>
+          <p class="meta">Python ／ Yahoo!ショッピングAPI ／ 価格比較アプリ</p>
           <p>品物の名称を検索欄に入力すると、そのキーワードを含むYahooショッピング上に掲載された商品の価格や在庫、商品ページのURLなどが表示され比較できるようになっている。これはYahoo社が無料で提供している商品検索APIを用いて実装した。開発のきっかけは、アルバイト中に聞こえたお客様の会話内容からアイデアを得たことである。</p>
           <dl>
             <dt>工夫</dt><dd>ニーズを考慮しできるだけシンプルなUIにし、ファイル出力できるようにした。また、税込み価格と実質合計価格を並べて表示することで、買い手が実際に支払う料金を一目で分かるようにした。</dd>
