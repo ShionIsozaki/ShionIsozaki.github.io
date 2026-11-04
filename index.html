@@ -141,7 +141,7 @@
   <section id="about" class="hero">
     <p class="name">礒﨑汐音</p>
     <p class="affil">茨城大学大学院 理工学研究科 情報工学専攻 修士1年 / 応用コンピューティング研究室</p>
-    <p>高専時代に機械・制御、学部時代に電気・電子を学んだのち、大学院から情報工学に進みました。センサーなどのハードウェアとソフトウェアを組み合わせた、体を動かして遊べる・学べるシステムづくりに取り組んでいます。</p>
+    <p>高専時代に機械・制御、学部時代に電気・電子を学んだのち、大学院から情報工学に進みました。センサーなどのハードウェアとソフトウェアを組み合わせた、体を動かして遊べる・学べるシステムづくりに取り組んでいます。実際に人に体験してもらい、その反応をもとに改善していくことを大切にしています。</p>
 
     <div class="profile-grid">
       <div class="box">
@@ -149,8 +149,8 @@
         <ul>
           <li>2019年4月 茨城工業高等専門学校 国際創造工学科 機械・制御系 入学</li>
           <li>2024年3月 茨城工業高等専門学校 国際創造工学科 機械・制御系 卒業</li>
-          <li>2024年4月 山形大学 情報・エレクトロニクス学科 電気・電子通信コース 入学（3年次編入）</li>
-          <li>2026年3月 山形大学 情報・エレクトロニクス学科 電気・電子通信コース 卒業</li>
+          <li>2024年4月 山形大学 工学部 情報・エレクトロニクス学科 電気・電子通信コース 入学（3年次編入）</li>
+          <li>2026年3月 山形大学 工学部 情報・エレクトロニクス学科 電気・電子通信コース 卒業</li>
           <li>2026年4月 茨城大学大学院 理工学研究科 情報工学専攻 入学</li>
         </ul>
       </div>
@@ -158,7 +158,8 @@
         <h3>使用経験</h3>
         <ul class="tags">
           <li>Unity</li><li>C#</li><li>Unreal Engine 5</li><li>Blueprint</li>
-          <li>Python</li><li>2D LiDAR</li><li>OpenFrameWorks</li><li>C++</li>
+          <li>Python</li><li>2D LiDAR</li><li>openFrameworks</li><li>C++</li>
+          <li>TypeScript</li><li>Phaser</li><li>React Native</li><li>Node.js</li>
         </ul>
       </div>
     </div>
@@ -172,7 +173,6 @@
     <article class="card">
       <!-- デモ動画：assets/research-demo.mp4 を置くと表示されます -->
       <div class="media square">
-        ここに研究のデモ動画（assets/research-demo.mp4）
         <video autoplay loop muted playsinline preload="metadata">
           <source src="assets/research-demo.mp4" type="video/mp4">
         </video>
@@ -213,12 +213,30 @@
 
       <article class="card">
         <div class="media">
-          ここにデモ動画（assets/horror-demo.mp4）
           <a href="assets/horror-demo.mp4" target="_blank" rel="noopener noreferrer">
           <video autoplay loop muted playsinline preload="metadata">
             <source src="assets/horror-demo.mp4" type="video/mp4">
           </video>
             
+                <article class="card">
+        <div class="media">
+          <a href="assets/game3-demo.mp4" target="_blank" rel="noopener noreferrer">
+          <video autoplay loop muted playsinline preload="metadata">
+            <source src="assets/game3-demo.mp4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+        <div class="card-body">
+          <h3>Quiz Adventure</h3>
+          <p class="meta">OpenFrameWorks ／ C++ ／ アドベンチャー</p>
+          <p>次々と出題される二択クイズに立ち位置で回答し、クリアを目指すゲーム。未就学児、小学1~6年、中学生以上の8パターンから出題されるクイズの難易度を選択でき、さらに科目も選べる。収録された問題数は600問以上。地域の科学館で展示を行った。</p>
+          <dl>
+            <dt>実装</dt><dd>Webカメラ、ノイズ抑制、背景差分法</dd>
+            <dt>工夫</dt><dd>テレビ番組の企画をオマージュしたもので、これを学習支援に生かせないかと考え、このような形になった。膨大な問題数を用意したため、どのプレイヤーにも適切な難易度の問題を出題することができた。また、Webカメラで体験者を検出し、背景差分で切り抜いてリアルタイムにゲーム画面へ合成表示することで没入感を高めた。</dd>
+          </dl>
+        </div>
+      </article>
+
       </a>
         </div>
         <div class="card-body">
@@ -232,29 +250,9 @@
         </div>
       </article>
 
+  
       <article class="card">
         <div class="media">
-          ここにデモ動画（assets/game2-demo.mp4）
-          <a href="assets/game3-demo.mp4" target="_blank" rel="noopener noreferrer">
-          <video autoplay loop muted playsinline preload="metadata">
-            <source src="assets/game3-demo.mp4" type="video/mp4">
-          </video>
-        </div>
-      </a>
-        <div class="card-body">
-          <h3>Quiz Adventure</h3>
-          <p class="meta">OpenFrameWorks ／ C++ ／ アドベンチャー</p>
-          <p>次々と出題される二択クイズに立ち位置で回答し、クリアを目指すゲーム。未就学児、小学1~6年、中学生以上の8パターンから出題されるクイズの難易度を選択でき、さらに科目も選べる。収録された問題数は600問以上。地域の科学館で展示を行った。</p>
-          <dl>
-            <dt>実装</dt><dd>Webカメラ、ノイズ抑制、背景差分法</dd>
-            <dt>工夫</dt><dd>テレビ番組の企画をオマージュしたもので、これを学習支援に生かせないかと考え、このような形になった。膨大な問題数を用意したため、どのプレイヤーにも適切な難易度の問題を出題することができた。</dd>
-          </dl>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="media">
-          ここにデモ動画（assets/game4-demo.mp4）
           <a href="assets/game4-demo.mp4" target="_blank" rel="noopener noreferrer">
           <video autoplay loop muted playsinline preload="metadata">
             <source src="assets/game4-demo.mp4" type="video/mp4">
@@ -272,7 +270,6 @@
       <!-- ゲームを追加するときは、この article ブロックを丸ごとコピーして増やします -->
       <article class="card">
         <div class="media">
-          ここにデモ動画（assets/game5-demo.mp4）
           <a href="assets/game5-demo.mp4" target="_blank" rel="noopener noreferrer">
           <video autoplay loop muted playsinline preload="metadata">
             <source src="assets/game5-demo.mp4" type="video/mp4">
@@ -288,13 +285,12 @@
 
       <article class="card">
         <div class="media portrait">
-          ここにデモ動画（assets/game2-demo.mp4）
           <a href="assets/game2-demo.mp4" target="_blank" rel="noopener noreferrer">
           <video autoplay loop muted playsinline preload="metadata">
             <source src="assets/game2-demo.mp4" type="video/mp4">
           </video>
-        </div>
       </a>
+        </div>
         <div class="card-body">
           <h3>おえかきバランスゲーム</h3>
           <p class="meta">Unity ／ C# ／ 物理パズル</p>
@@ -303,7 +299,7 @@
             <dt>実装</dt><dd>物理演算、シーン管理、動的コライダー生成、タイマー管理など</dd>
             <dt>工夫</dt><dd>決められた形状のブロックを積み重ねるのではなく、自身で自由な図形を落とすことができるようになっている点。これにより戦略の幅が広がり、楽しみ方のレパートリーも増えた。</dd>
           </dl>
-        </div>
+      </a>
       </article>
 
     </div>
@@ -314,7 +310,6 @@
 
       <article class="card">
         <div class="media">
-          ここに画面画像（assets/price-1.png）
           <a href="assets/price-1.png" target="_blank" rel="noopener noreferrer">
           <img src="assets/price-1.png" alt="価格検索・比較ソフトの画面">
             </a>
@@ -322,7 +317,7 @@
         <div class="card-body">
           <h3>価格検索・比較ソフト<span class="status">個人開発</span></h3>
           <p class="meta">Python ／ Yahoo!ショッピングAPI ／ 価格比較アプリ</p>
-          <p>品物の名称を検索欄に入力すると、そのキーワードを含むYahooショッピング上に掲載された商品の価格や在庫、商品ページのURLなどが表示され比較できるようになっている。これはYahoo社が無料で提供している商品検索APIを用いて実装した。開発のきっかけは、アルバイト中に聞こえたお客様の会話内容からアイデアを得たことである。</p>
+          <p>品物の名称を検索欄に入力すると、そのキーワードを含むYahooショッピング上に掲載された商品の価格や在庫、商品ページのURLなどが表示され比較できるようになっている。これはYahooショッピングの商品検索APIを用いて実装した。開発のきっかけは、アルバイト中に聞こえたお客様の会話内容からアイデアを得たことである。</p>
           <dl>
             <dt>工夫</dt><dd>ニーズを考慮しできるだけシンプルなUIにし、ファイル出力できるようにした。また、税込み価格と実質合計価格を並べて表示することで、買い手が実際に支払う料金を一目で分かるようにした。</dd>
           </dl>
@@ -335,14 +330,13 @@
 
       <article class="card">
         <div class="media">
-          ここに画面画像（assets/class-app-1.png）
           <a href="assets/class-app-1.png" target="_blank" rel="noopener noreferrer">
           <img src="assets/class-app-1.png" alt="授業の実習で開発したアプリの画面">
             </a>
         </div>
         <div class="card-body">
           <h3>MEPAT<span class="status">授業実習</span></h3>
-          <p class="meta">ICTソリューション実践 ／ React Native ／ チーム開発（5人)</p>
+          <p class="meta">ICTソリューション実践 ／ React Native ／ チーム開発(5人)</p>
           <p>自宅にある食材の在庫管理をサポートするモバイルアプリ。「バーコード読み取り」「レシート読み取り」「冷蔵庫内撮影」「手動入力」の4つの方法で食材とその賞味、消費期限を登録することができる。期限が近づいてくると自動でその食材を使った献立を提案する。</p>
           <dl>
             <dt>担当</dt><dd>バーコード読み取り機能、冷蔵庫内撮影機能、登録不備検知機能</dd>
