@@ -358,8 +358,13 @@
   });
   document.querySelectorAll('.media video').forEach(function (video) {
     var src = video.querySelector('source');
-    if (video.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) { video.remove(); return; }
     if (src) src.addEventListener('error', function () { video.remove(); });
+  });
+  // ページの読み込み完了後、ファイルが見つからなかった動画だけを消す
+  window.addEventListener('load', function () {
+    document.querySelectorAll('.media video').forEach(function (video) {
+      if (video.networkState === HTMLMediaElement.NETWORK_NO_SOURCE && video.readyState === 0) video.remove();
+    });
   });
 </script>
 
