@@ -113,6 +113,11 @@
       width: min(100%, 300px);   /* 縦長枠の最大幅。大きくしたければ数値を変更 */
       margin: 0 auto;
     }
+    .media.square {
+      aspect-ratio: 1 / 1;
+      width: min(100%, 560px);   /* 正方形の最大幅。大きさはこの数値で調整 */
+      margin: 0 auto;
+    }
 
     footer { padding: 32px 0 48px; color: var(--muted); font-size: 13px; text-align: center; }
   </style>
@@ -166,7 +171,7 @@
 
     <article class="card">
       <!-- デモ動画：assets/research-demo.mp4 を置くと表示されます -->
-      <div class="media">
+      <div class="media square">
         ここに研究のデモ動画（assets/research-demo.mp4）
         <video autoplay loop muted playsinline preload="metadata">
           <source src="assets/research-demo.mp4" type="video/mp4">
