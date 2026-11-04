@@ -131,7 +131,7 @@
   <section id="about" class="hero">
     <p class="name">礒﨑汐音</p>
     <p class="affil">茨城大学大学院 理工学研究科 情報工学専攻 修士1年 / 応用コンピューティング研究室</p>
-    <p>【要記入：2〜3行の自己紹介。例：機械・制御、電気・電子を学んだのち、大学院から情報工学に進みました。センサーなどのハードウェアとソフトウェアを組み合わせた、体を動かして遊べる・学べるシステムづくりに取り組んでいます。】</p>
+    <p>【高専時代に機械・制御、学部時代に電気・電子を学んだのち、大学院から情報工学に進みました。センサーなどのハードウェアとソフトウェアを組み合わせた、体を動かして遊べる・学べるシステムづくりに取り組んでいます。】</p>
 
     <div class="profile-grid">
       <div class="box">
@@ -169,13 +169,12 @@
       </div>
       <div class="card-body">
         <h3>宇宙船脱出ゲーム<span class="status">研究・開発中</span></h3>
-        <p class="meta">Unity 6 ／ 2画面構成（壁スクリーン＋床面投影）／ 2D LiDAR による全身操作</p>
-        <p>【要記入：研究の背景と目的。例：子どもが体を動かしながら天体について学べることを目指した学習支援システムです。】</p>
+        <p class="meta">Unity 6 ／ 2画面構成（壁スクリーン＋床面投影）／ 2D LiDAR による立ち位置操作</p>
+        <p>児童が興味を持ちにくいとされる小学校理科の天体単元に関して、体を動かしながら学べることを目指した学習支援システムです。</p>
         <p>宇宙船に迷い込んだ主人公が、天体にまつわるギミックをクリアしながら地球への帰還を目指す3Dアクションアドベンチャーです。プレイヤーは床に立つ位置を左右に移動したり、ジャンプしたりすることでキャラクターを操作します。</p>
         <dl>
-          <dt>担当</dt><dd>【要記入：例 企画・プログラム全般・センサー連携】</dd>
           <dt>技術</dt><dd>Unity / C#、SLAMTEC RPLIDAR A1、Python（センサー読み取り → UDP で Unity へ送信）</dd>
-          <dt>工夫</dt><dd>【要記入：例 床に立つ位置を左・中・右のレーンに対応させ、足が検出されなくなった瞬間をジャンプとして判定】</dd>
+          <dt>工夫</dt><dd>ゲームとしての没入感を高めるため、天体と無関係のアクションギミックを用意し、さらに足が検出されなくなった瞬間をジャンプとして判定させることで動作のバリエーションを増やし、操作が単調になりにくいようにした。</dd>
         </dl>
       </div>
       <!-- ゲーム内の画面写真：assets/research-1.jpg 〜 3.jpg -->
@@ -206,13 +205,68 @@
         <div class="card-body">
           <h3>午前3時の空室<span class="status">開発中</span></h3>
           <p class="meta">Unreal Engine 5.4 ／ Blueprint ／ 一人称3Dホラー</p>
-          <p>約60分でクリアできる一人称視点の精神系ホラーゲームです。部屋を探索し、アイテムや会話から物語の真相に近づいていきます。エンディングは2種類。</p>
+          <p>約30分でクリアできる一人称視点の精神系ホラーゲームです。部屋を探索し、アイテムや会話から物語の真相に近づいていきます。エンディングは2種類。</p>
           <dl>
             <dt>実装</dt><dd>インタラクション、ドア開閉、インベントリ、会話・字幕、章管理など</dd>
+            <dt>工夫</dt><dd>単調なホラーではなく歩く速度や照明の切り替え、効果音など、最も怖いと感じる演出を目指して開発</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media">
+          ここにデモ動画（assets/game2-demo.mp4）
+          <video autoplay loop muted playsinline preload="metadata">
+            <source src="assets/game2-demo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="card-body">
+          <h3>おえかきバランスゲーム</h3>
+          <p class="meta">Unity ／ C# ／ 物理パズル</p>
+          <p>プレイヤー同士が画面上に自由な線を描き足し、それがそのまま物理法則に従う物体となって積み重なっていく対戦型お絵描きバランスゲームです。タワーを崩してしまったプレイヤーが負けとなります。</p>
+          <dl>
+            <dt>実装</dt><dd>物理演算、シーン管理、動的コライダー生成、タイマー管理など</dd>
+            <dt>工夫</dt><dd>決められた形状のブロックを積み重ねるのではなく、自身で自由な図形を落とすことができるようになっている点。これにより戦略の幅が広がり、楽しみ方のレパートリーも増えた。</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media">
+          ここにデモ動画（assets/game2-demo.mp4）
+          <video autoplay loop muted playsinline preload="metadata">
+            <source src="assets/game2-demo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="card-body">
+          <h3>Quiz Adventure</h3>
+          <p class="meta">OpenFrameWorksル ／ C++ ／ アドベンチャー</p>
+          <p>次々と出題される二択クイズに立ち位置で回答し、クリアを目指すゲーム。未就学児、小学1~6年、中学生以上の8パターンから出題されるクイズの難易度を選択でき、さらに科目も選べる。収録された問題数は600問以上。地域の科学館で展示を行った。</p>
+          <dl>
+            <dt>実装</dt><dd>Webカメラ、ノイズ抑制、背景差分法</dd>
+            <dt>工夫</dt><dd>テレビ番組の企画をオマージュしたもので、これを学習支援に生かせないかと考え、このような形になった。膨大な問題数を用意したため、どのプレイヤーにも適切な難易度の問題を出題することができた。</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media">
+          ここにデモ動画（assets/game2-demo.mp4）
+          <video autoplay loop muted playsinline preload="metadata">
+            <source src="assets/game2-demo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="card-body">
+          <h3>ORBIT SLING ／ GRAVITY MERGE ／ STAR LINE</h3>
+          <p class="meta">Claude Code, Node.js ／ TypeScript, Phaser ／ ミニゲーム</p>
+          <p>天体に関する要素を取り入れた、ミニゲーム集。生成AIでのアプリ開発に興味を持ち、研究のアイデアを得ることを目的として制作した。ORBIT SLINGはタイミングよく探査機を打ち出してハイスコアを目指す。GRAVITY MERGEは天体同士を合わせて大きな天体を作っていき、ハイスコアを目指す。STAR LINEはランダムに生成される星の配置から一筆書きできる経路を探すゲームで、実在する星座をなぞって体験するモードも収録。</p>
+          <dl>
+            <dt>担当</dt><dd>【要記入】</dd>
             <dt>工夫</dt><dd>【要記入】</dd>
           </dl>
         </div>
       </article>
+
 
       <!-- ゲームを追加するときは、この article ブロックを丸ごとコピーして増やします -->
       <article class="card">
@@ -246,10 +300,10 @@
         </div>
         <div class="card-body">
           <h3>価格検索・比較ソフト<span class="status">個人開発</span></h3>
-          <p class="meta">【要記入：使用言語・ライブラリ】</p>
-          <p>【要記入：何を検索・比較できるか、作ったきっかけ】</p>
+          <p class="meta">Python ／ Yahoo!ショッピンAPI ／ 価格比較アプリ</p>
+          <p>品物の名称を検索欄に入力すると、そのキーワードを含むYahooショッピング上に掲載された商品の価格や在庫、商品ページのURLなどが表示され比較できるようになっている。これはYahoo社が無料で提供している商品検索APIを用いて実装した。開発のきっかけは、アルバイト中に聞こえたお客様の会話内容からアイデアを得たことである。</p>
           <dl>
-            <dt>工夫</dt><dd>【要記入】</dd>
+            <dt>工夫</dt><dd>ニーズを考慮しできるだけシンプルなUIにし、ファイル出力できるようにした。また、税込み価格と実質合計価格を並べて表示することで、買い手が実際に支払う料金を一目で分かるようにした。</dd>
           </dl>
           <div class="links">
             <!-- ソースコードを公開する場合のみ。APIキー等が含まれていないか必ず確認 -->
