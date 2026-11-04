@@ -213,19 +213,12 @@
 
       <article class="card">
         <div class="media">
-          <a href="assets/horror-demo.mp4" target="_blank" rel="noopener noreferrer">
-          <video autoplay loop muted playsinline preload="metadata">
-            <source src="assets/horror-demo.mp4" type="video/mp4">
-          </video>
-            
-                <article class="card">
-        <div class="media">
           <a href="assets/game3-demo.mp4" target="_blank" rel="noopener noreferrer">
-          <video autoplay loop muted playsinline preload="metadata">
-            <source src="assets/game3-demo.mp4" type="video/mp4">
-          </video>
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="assets/game3-demo.mp4" type="video/mp4">
+            </video>
+          </a>
         </div>
-      </a>
         <div class="card-body">
           <h3>Quiz Adventure</h3>
           <p class="meta">OpenFrameWorks ／ C++ ／ アドベンチャー</p>
@@ -237,7 +230,13 @@
         </div>
       </article>
 
-      </a>
+      <article class="card">
+        <div class="media">
+          <a href="assets/horror-demo.mp4" target="_blank" rel="noopener noreferrer">
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="assets/horror-demo.mp4" type="video/mp4">
+            </video>
+          </a>
         </div>
         <div class="card-body">
           <h3>午前3時の空室<span class="status">開発中</span></h3>
@@ -250,15 +249,14 @@
         </div>
       </article>
 
-  
       <article class="card">
         <div class="media">
           <a href="assets/game4-demo.mp4" target="_blank" rel="noopener noreferrer">
-          <video autoplay loop muted playsinline preload="metadata">
-            <source src="assets/game4-demo.mp4" type="video/mp4">
-          </video>
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="assets/game4-demo.mp4" type="video/mp4">
+            </video>
+          </a>
         </div>
-      </a>
         <div class="card-body">
           <h3>ORBIT SLING ／ GRAVITY MERGE ／ STAR LINE</h3>
           <p class="meta">Claude Code, Node.js ／ TypeScript, Phaser ／ ミニゲーム</p>
@@ -266,16 +264,15 @@
         </div>
       </article>
 
-
       <!-- ゲームを追加するときは、この article ブロックを丸ごとコピーして増やします -->
       <article class="card">
         <div class="media">
           <a href="assets/game5-demo.mp4" target="_blank" rel="noopener noreferrer">
-          <video autoplay loop muted playsinline preload="metadata">
-            <source src="assets/game5-demo.mp4" type="video/mp4">
-          </video>
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="assets/game5-demo.mp4" type="video/mp4">
+            </video>
+          </a>
         </div>
-      </a>
         <div class="card-body">
           <h3>RING SORT ／ SOLAR RELAY ／ ORBIT HOP</h3>
           <p class="meta">Claude Code, Node.js ／ TypeScript, Phaser ／ ミニゲーム</p>
@@ -286,10 +283,10 @@
       <article class="card">
         <div class="media portrait">
           <a href="assets/game2-demo.mp4" target="_blank" rel="noopener noreferrer">
-          <video autoplay loop muted playsinline preload="metadata">
-            <source src="assets/game2-demo.mp4" type="video/mp4">
-          </video>
-      </a>
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="assets/game2-demo.mp4" type="video/mp4">
+            </video>
+          </a>
         </div>
         <div class="card-body">
           <h3>おえかきバランスゲーム</h3>
@@ -299,7 +296,7 @@
             <dt>実装</dt><dd>物理演算、シーン管理、動的コライダー生成、タイマー管理など</dd>
             <dt>工夫</dt><dd>決められた形状のブロックを積み重ねるのではなく、自身で自由な図形を落とすことができるようになっている点。これにより戦略の幅が広がり、楽しみ方のレパートリーも増えた。</dd>
           </dl>
-      </a>
+        </div>
       </article>
 
     </div>
@@ -353,12 +350,16 @@
 </footer>
 
 <script>
-  // 画像・動画ファイルがまだ置かれていない場合は、要素を消して案内文を見せる
+  // 画像・動画ファイルが読み込めなかった場合は、要素を消して枠だけにする
+  // （スクリプト実行前に読み込みが失敗していた場合にも対応）
   document.querySelectorAll('.media img').forEach(function (img) {
+    if (img.complete && img.naturalWidth === 0) { img.remove(); return; }
     img.addEventListener('error', function () { img.remove(); });
   });
-  document.querySelectorAll('.media video source').forEach(function (src) {
-    src.addEventListener('error', function () { src.parentElement.remove(); });
+  document.querySelectorAll('.media video').forEach(function (video) {
+    var src = video.querySelector('source');
+    if (video.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) { video.remove(); return; }
+    if (src) src.addEventListener('error', function () { video.remove(); });
   });
 </script>
 
